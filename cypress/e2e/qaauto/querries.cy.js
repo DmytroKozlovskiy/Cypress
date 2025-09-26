@@ -44,7 +44,7 @@ describe('queries', () => {
 
   it('text contains Do more', () => {
     cy.contains('Do more',).should('be.visible');
-      
+
   });
 
   it('login with invalid credentials shows error', () => {
