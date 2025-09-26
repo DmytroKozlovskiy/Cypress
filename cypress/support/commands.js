@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const uniqueEmail = () => `qa_${Date.now()}_${Math.random().toString(16).slice(2)}@mailinator.com`;
+
+const sel = {
+  modal: 'div.modal-content',
+  name: 'input[name="name"], input[formcontrolname="name"]',
+  last: 'input[name="lastName"], input[formcontrolname="lastName"]',
+  email: 'input[name="email"], input[formcontrolname="email"]',
+  pwd: 'input[name="password"], input[formcontrolname="password"]',
+  pwd2: 'input[name="rePassword"], input[formcontrolname="rePassword"]',
+  registerBtn: 'button[type="submit"], button.btn.btn-primary',
+  error: '.invalid-feedback, .error-text'
+};
