@@ -1,7 +1,9 @@
 describe('first name actions', () => {
 
   beforeEach(() => {
-    cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
+    cy.visit('/', {
+      auth: { username: Cypress.env('basicUser'), password: Cypress.env('basicPass') }
+    });
   });
 
   it('open modal window', () => {
@@ -43,7 +45,9 @@ describe('first name actions', () => {
 describe('Last name actions', () => {
 
   beforeEach(() => {
-    cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
+    cy.visit('/', {
+      auth: { username: Cypress.env('basicUser'), password: Cypress.env('basicPass') }
+    });
   });
 
   it('last name error', () => {
@@ -86,7 +90,9 @@ describe('Last name actions', () => {
 describe('Email actions', () => {
 
   beforeEach(() => {
-    cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
+    cy.visit('/', {
+      auth: { username: Cypress.env('basicUser'), password: Cypress.env('basicPass') }
+    });
   });
 
   it('email error', () => {
@@ -121,7 +127,9 @@ describe('Email actions', () => {
 describe('Password actions', () => {
 
   beforeEach(() => {
-    cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
+    cy.visit('/', {
+      auth: { username: Cypress.env('basicUser'), password: Cypress.env('basicPass') }
+    });
   });
 
   it('wrong data password error', () => {
@@ -155,7 +163,9 @@ describe('Password actions', () => {
 describe('Re-enter password actions', () => {
 
   beforeEach(() => {
-    cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
+    cy.visit('/', {
+      auth: { username: Cypress.env('basicUser'), password: Cypress.env('basicPass') }
+    });
   });
 
   it('password do not match', () => {
@@ -209,7 +219,7 @@ describe('Button register', () => {
     cy.get('button[type="button"]').should('be.enabled');
   });
 
-  it.only('Success registration', () => {
+  it('Success registration', () => {
     cy.contains('Sign up').click();
     cy.get('input[name="name"]').type('John').blur();
     cy.get('input[name="lastName"]').type('Smith').blur();
@@ -218,5 +228,4 @@ describe('Button register', () => {
     cy.get('input[name="repeatPassword"]').type('Qwerty123').blur();
     cy.contains('Register').click();
   });
-  /* Цей тест можливо пройти один раз. На другий раз система пише "User already exists". Але тест був успішно пройдено. */
 });
