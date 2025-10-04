@@ -35,3 +35,4 @@ const sel = {
   registerBtn: 'button[type="submit"], button.btn.btn-primary',
   error: '.invalid-feedback, .error-text'
 };
+

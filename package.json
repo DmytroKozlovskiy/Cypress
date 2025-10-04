@@ -5,9 +5,9 @@
   "main": "cypress.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open", 
-     "cy:qauto:open": "cypress open --config-file cypress.config.js",
-    "cy:qauto:run":  "cypress run  --config-file cypress.config.js"
+    "cy:open": "cypress open",
+    "cy:open2": "cypress open --config-file cypress.config2.js",
+    "cy:run2": "cypress run  --config-file cypress.config2.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,8 @@
   "type": "commonjs",
   "devDependencies": {
     "cypress": "^15.2.0"
+  },
+  "dependencies": {
+    "mochawesome": "^6.2.1"
   }
 }
