@@ -6,6 +6,8 @@ module.exports = defineConfig({
     env: {
       basicUser: 'guest',
       basicPass: 'welcome2qauto',
+      email: 'formula.ods@gmail.com',   
+      password: 'Qwerty123'
     },
 
     setupNodeEvents(on, config) {

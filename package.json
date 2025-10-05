@@ -17,6 +17,7 @@
     "cypress": "^15.2.0"
   },
   "dependencies": {
+    "cypress-plugin-api": "^2.11.2",
     "mochawesome": "^6.2.1"
   }
 }
